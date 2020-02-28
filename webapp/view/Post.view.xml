@@ -1,0 +1,44 @@
+<mvc:View controllerName="Project.BackendBinding.controller.Post" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Insert Patient Info">
+					<content>
+						<f:SimpleForm id="patientForm"
+						editable="true"
+						layout="ResponsiveGridLayout"
+						title="Patient Information"
+						labelSpanXL="4"
+						labelSpanL="3"
+						labelSpanM="3"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="4"
+						emptySpanL="4"
+						emptySpanM="4"
+						emptySpanS="4"
+						columnsXL="1"
+						columnsL="1"
+						columnsM="1"
+						singleContainerFullSize="false" >
+						<f:content>
+							<Label text="Patient ID" />
+							<Input id="pid" value="" />
+							
+							<Label text="OutPatId" />
+							<Input id="poid" value=""/>
+							
+							<Label text="Date of Examination" />
+							<DateTimePicker id="pdate" valueFormat="yyyy-MM-ddTHH:mm:ss"/>
+							
+							<Label text="Lab Number" />
+							<Input id="plnum" value="" type="Number"/>
+							<Button text="Insert" type = "Accept" press="onCreate"/>
+						</f:content>
+					</f:SimpleForm>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>	

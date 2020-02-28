@@ -1,0 +1,36 @@
+<mvc:View controllerName="Project.BackendBinding.controller.Get" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Patient Info">
+					<content>
+						<Button text="Create" type = "Accept" press="onCreate"/>
+						<ScrollContainer
+							height="100%"
+							width="100%"
+							horizontal="true"
+							vertical="true"
+							focusable="true">
+											
+							<List
+								id="id_list_patient"
+								headerText="Patient"
+								includeItemInSelection="true"
+								selectionChange="onListPress"
+								
+								items="{
+							         path : 'PatientModel>/results'
+							      }"
+							      mode="SingleSelectMaster">
+								
+									<StandardListItem
+										title="{PatientModel>BldgName}"
+										description="{PatientModel>Disease}"/>
+							</List>
+						</ScrollContainer>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
